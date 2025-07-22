@@ -1,8 +1,25 @@
-body {
-  max-width: 1140px;
-  margin: 0 auto;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1140px;
+  margin: 50px auto;
+  font-family: Poppins;
+}
+
+/* nav bar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,4 +39,119 @@ body {
 .menu-container ul img {
   width: 24px;
   height: 24px;
+}
+
+/* Banner section Styles */
+.banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  background-image: url(../images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.banner-text p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.prebook-btn {
+  background-color: rgb(211, 0, 81);
+  border-radius: 25px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+/* Logo section styles */
+.logo-section {
+  margin-top: 70px;
+}
+.logo-container {
+  display: flex;
+  /* gap: 30px; */
+  justify-content: space-around;
+}
+
+/* Card Section Styles */
+.card-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.card-section h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.see-more {
+  text-align: right;
+  cursor: pointer;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 20px;
+  align-content: center;
+}
+.card {
+  /* width: 100%; */
+  padding: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.082);
+  border-radius: 8px;
+}
+.card > img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.see-more {
+  color: rgb(211, 0, 81);
+  font-size: 1.2rem;
+  font-weight: 700px;
+  margin-top: 15px;
+}
+
+/* Responsive Media Query */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .menu-container ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .banner-section {
+    padding: 20px;
+    flex-direction: column;
+    background-image: none;
+  }
+  .banner-image > img {
+    width: 100%;
+  }
+  .logo-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 50px;
+    width: 30%;
+    margin: auto;
+  }
+  .logo-section hr {
+    visibility: hidden;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
